@@ -1,4 +1,19 @@
 function centers = get_output_centers( plot )
+% ************************************************************************
+%
+% Description
+%   Apply the correct output MF center for all the rules. This will be used
+%   to defuzzify the data to get a crisp output. This array is essentially
+%   hard-coded and was derived from Table 1.
+% 
+% Inputs
+%   plot: Flag to plot the Output MFs across the universe of discourse.
+%   1=plot
+%
+% Outputs
+%   centers: An array of output MF centers for each rule.
+%
+% ************************************************************************
 
     % ***************** Only used for plotting ***********************
     if( plot == 1)

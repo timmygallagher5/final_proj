@@ -1,4 +1,19 @@
 function macd_values = fuzzify_macd( macd, plot )
+% ************************************************************************
+%
+% Description
+%   Fuzzify the current macd input by applying it to all of the MACD Input
+%   MFs.
+% 
+% Inputs
+%   macd: the current macd value
+%   plot: Flag to plot the Input MFs across the universe of discourse.
+%   1=plot
+%
+% Outputs
+%   macd_values: The values returned by each of the Input MFs
+%
+% ************************************************************************
     
     % ***************** Only used for plotting ***********************
     if( plot == 1 )

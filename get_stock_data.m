@@ -29,7 +29,7 @@ function data = get_stock_data(symbol, startdate, enddate, interval)
     % urlread(url, 'post',{'matlabstockdata@yahoo.com', 'historical stocks'})
     % 
     % Function was updated by Tim Gallagher to just return the closing
-    % prices
+    % prices and error out if the if an incorrect TICKER is given.
     
     if(nargin() == 1)
         startdate = posixtime(datetime('1-Jan-2018'));

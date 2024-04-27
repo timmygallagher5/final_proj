@@ -32,6 +32,7 @@ function cci = get_CCI(filename)
 %
 % Outputs:
 %    - cci: The most recent consumer confidence index from the file.
+%
 % ************************************************************************
 
     % Read in the raw data from the default file
@@ -47,7 +48,8 @@ function cci = get_CCI(filename)
    data_curr_yr  = cci_raw_data.Year(end);
    
    % Throw warning to user to alert the data might be out of date
-   if( data_curr_mon ~= str2num(datestr(now, 'mm')) )
+   if( ( data_curr_mon ~= str2num(datestr(now, 'mm') ) ) & ...
+       ( data_curr_mon + 1 ~= str2num(datestr(now, 'mm') ) ) )
        warning(['CCI Data is published at the end of every month, make sure your data is up to date.' ...
            'Check https://data.sca.isr.umich.edu/data-archive/mine.php for recent data']);
    end

@@ -1,4 +1,19 @@
-function rsi_values = fuzzify_rsi( rsi, plot ) 
+function rsi_values = fuzzify_rsi( rsi, plot )
+% ************************************************************************
+%
+% Description
+%   Fuzzify the current rsi input by applying it to all of the MACD Input
+%   MFs.
+% 
+% Inputs
+%   rsi: the current rsi value
+%   plot: Flag to plot the Input MFs across the universe of discourse.
+%   1=plot
+%
+% Outputs
+%   rsi_values: The values returned by each of the Input MFs
+%
+% ************************************************************************
 
     % ***************** Only used for plotting ***********************
     if( plot == 1)

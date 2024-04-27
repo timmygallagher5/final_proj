@@ -37,6 +37,8 @@ function RSI = calc_RSI(data, N)
 % Created by Josiah Renfree
 % February 8, 2008
 % If no data is passed to the function, give error
+%
+% Updated by Tim Gallagher to only calculate the current RSI data
 if nargin == 0
     error('Please provide a vector of stock prices')    % error prompt
 end
@@ -65,25 +67,5 @@ else
     RSI(1) = 100 - (100/(1+RS));    % calculate intitial RSI value
 end
 clear Adva Decl                     % clear variables
-% Now cycle through the rest of the data using the initial RSI value to
-% calculate the remaining RSI values.
-% for i = 1+N:length(data)-1
-%     chg = data(i+1) - data(i);      % calculate change between days
-%     
-%     if chg >= 0                     % if positive change, it advanced
-%         Adva = chg;                 % assign change to advance variable
-%         Decl = 0;                   % set declined variable to 0
-%     else                            % if negative change, it declined
-%         Decl = abs(chg);            % assign change to declined variable
-%         Adva = 0;                   % set advanced variable to 0
-%     end
-%     AvgGain = ((AvgGain*(N-1))+Adva)/N;   % calculate next average gain
-%     AvgLoss = ((AvgLoss*(N-1))+Decl)/N;   % calculate next average loss
-%     
-%     if AvgLoss == 0                 % if average loss is 0, RSI = 100
-%         RSI(i-N) = 100;             % set RSI to 100
-%     else
-%         RS = AvgGain / AvgLoss;     % calculate RS
-%         RSI(i+1-N) = 100 - (100/(1+RS));    % calculate latest RSI
-%     end
+
 end

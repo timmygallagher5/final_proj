@@ -18,6 +18,7 @@ function macd = calc_MACD(closing_data)
 %
 % Outputs
 %   macd: The MACD value for a given set of closing prices.
+%
 % ************************************************************************
 
 % Define the N for the 2 different calculations

@@ -1,4 +1,19 @@
 function cci_values = fuzzify_cci( cci, plot )
+% ************************************************************************
+%
+% Description
+%   Fuzzify the current cci input by applying it to all of the CCI Input
+%   MFs.
+% 
+% Inputs
+%   cci: the current cci value
+%   plot: Flag to plot the Input MFs across the universe of discourse.
+%   1=plot
+%
+% Outputs
+%   cci_values: The values returned by each of the Input MFs
+%
+% ************************************************************************
 
     % ***************** Only used for plotting ***********************
     if( plot == 1 )    
